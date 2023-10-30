@@ -4,8 +4,11 @@
     use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
     class MichelinController extends AbstractController{
-        public function accueil(){
-            return $this->render('accueil.html.twig');
+        public function accueil($nom){
+            return $this->render('accueil.html.twig',array('nom' => $nom));
+        }
+        public function menu(){
+            return $this->render('menu.html.twig');
         }
     }
 ?>
